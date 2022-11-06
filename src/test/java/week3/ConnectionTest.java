@@ -11,7 +11,8 @@ public class ConnectionTest {
         String password = "hr";
 
         Connection connection = DriverManager.getConnection(dbUrl,username,password);
-        Statement statement = connection.createStatement();
+        Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,
+                ResultSet.CONCUR_READ_ONLY);
         ResultSet resultSet = statement.executeQuery("SELECT * from Employees");
 
         resultSet.next(); // this line will move my pointer to next line, which is 1st line of my table
@@ -31,9 +32,17 @@ public class ConnectionTest {
 //            System.out.println(resultSet.getString(2));
 //            resultSet.next();
 //        }
+        System.out.println("***************************");
+        resultSet.first();
+        resultSet.beforeFirst();
+        resultSet.absolute(6);
+        System.out.println(resultSet.getString(2));
+        System.out.println("********************");
 
-        while (resultSet.next()){
+        while (resultSet.next()){ // result set continue from 3rd line, because we have 2 resultset.next before
             System.out.println(resultSet.getString(2));
         }
+
+
     }
 }
