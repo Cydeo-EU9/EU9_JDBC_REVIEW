@@ -225,6 +225,34 @@ select JOB_ID, DEPARTMENTS.MANAGER_ID from EMPLOYEES
 inner join DEPARTMENTS
 on EMPLOYEES.DEPARTMENT_ID = DEPARTMENTS.DEPARTMENT_ID;
 
+-- who works in which department
+select FIRST_NAME, LAST_NAME, DEPARTMENT_NAME from EMPLOYEES
+left join DEPARTMENTS
+on EMPLOYEES.DEPARTMENT_ID = DEPARTMENTS.DEPARTMENT_ID;
+
+select FIRST_NAME, LAST_NAME, DEPARTMENT_NAME from EMPLOYEES
+                                                       left join DEPARTMENTS
+                                                                 on EMPLOYEES.DEPARTMENT_ID = DEPARTMENTS.DEPARTMENT_ID
+where DEPARTMENT_NAME='Shipping';
+
+-- find out the employees who left the company
+select END_DATE from JOB_HISTORY;
+select FIRST_NAME from EMPLOYEES;
+
+select FIRST_NAME, END_DATE from EMPLOYEES
+right join JOB_HISTORY
+on EMPLOYEES.EMPLOYEE_ID = JOB_HISTORY.EMPLOYEE_ID;
+
+select FIRST_NAME, END_DATE from EMPLOYEES
+                                     left join JOB_HISTORY
+                                                on EMPLOYEES.EMPLOYEE_ID = JOB_HISTORY.EMPLOYEE_ID;
+
+
+-- department name and city together
+select DEPARTMENT_NAME, CITY from DEPARTMENTS
+full join LOCATIONS
+on DEPARTMENTS.LOCATION_ID = LOCATIONS.LOCATION_ID;
+
 
 
 
