@@ -36,9 +36,33 @@ public class JDBCReview {
 
         System.out.println("fullName = " + firstName + " " +  lastName);
 
-        while (resultSet.next()){
-            System.out.println(resultSet.getString("Job_id"));
+//        while (resultSet.next()){
+//            System.out.println(resultSet.getString("Job_id"));
+//        }
+//
+//        resultSet.previous();
+//        System.out.println(resultSet.getString(1));
+
+//        resultSet.absolute(20);
+//        System.out.println(resultSet.getString(1));
+//
+//        System.out.println(resultSet.getDouble("Salary"));
+
+        // creating result set meta data
+        ResultSetMetaData rsmd = resultSet.getMetaData();
+
+        System.out.println(rsmd.getColumnCount());
+        for (int i = 1; i < 12; i++) {
+            System.out.println(rsmd.getColumnName(i));
         }
+
+        System.out.println("rsmd.getColumnType(1) = " + rsmd.getColumnType(1));
+
+        DatabaseMetaData dbmd = connection.getMetaData();
+
+        System.out.println(dbmd.getUserName());
+        System.out.println(dbmd.getDriverName());
+        System.out.println(dbmd.getDatabaseProductName());
 
 
     }
