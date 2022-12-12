@@ -253,12 +253,78 @@ select DEPARTMENT_NAME, CITY from DEPARTMENTS
 full join LOCATIONS
 on DEPARTMENTS.LOCATION_ID = LOCATIONS.LOCATION_ID;
 
+-- we can put shortcut for those table name
+select DEPARTMENT_NAME, CITY from DEPARTMENTS d
+                                      full join LOCATIONS l
+                                                on d.LOCATION_ID = l.LOCATION_ID;
+
+
+select DEPARTMENT_NAME, CITY from DEPARTMENTS d
+                                      full join LOCATIONS l
+                                                on d.LOCATION_ID = l.LOCATION_ID
+where CITY='Seattle';
+
+-- self join,  joining the table with itself
+-- all employees firstname, lastname and their managers first and lastname(we can use order by)
+select e1.EMPLOYEE_ID, e1.FIRST_NAME, e1.LAST_NAME, e1.MANAGER_ID, e2.EMPLOYEE_ID from EMPLOYEES e1
+join EMPLOYEES e2
+on e1.MANAGER_ID=e2.EMPLOYEE_ID;
 
 
 
+-- DDL & DML  (DDL is for data structure, DML is for data itself)
+-- create
+create table Teachers(
+                         T_id integer primary key ,
+                         T_name char(40),
+                         T_branch char(40)
+);
+
+select * from Teachers;
+
+create table Students(
+                         S_id integer primary key ,
+                         S_name char(40),
+                         S_branch char(40)
+
+);
+
+-- insert value
+insert into TEACHERS values (1,'Jamal','Automation');
+insert into TEACHERS values (2,'Muhtar','Java');
+insert into TEACHERS values (3,'Oscar','API');
+
+insert into STUDENTS values (1,'Ahmet','Java');
+insert into STUDENTS values (2,'Jenifer','API');
+insert into STUDENTS values (3,'Suarez','Automation');
+
+select * from Teachers;
+select * from Students;
+
+--update
+update Students
+set S_BRANCH = 'Database'
+where S_ID = 1;
+
+-- delete one row
+delete Students
+where S_ID = 2;
+
+--alter functions
+alter table Teachers
+add Salary integer;
+
+-- change column name
+alter table Teachers rename column T_name to name;
+
+--change table name
+alter table Students rename to allStudents;
+
+-- delete all the data, but keep the table
+-- truncate
+truncate table Students;
 
 
-
-
-
+-- delete whole table
+drop table TEACHERS;
 
