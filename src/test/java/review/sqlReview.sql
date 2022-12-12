@@ -181,7 +181,37 @@ select SALARY from EMPLOYEES
 order by SALARY desc ;
 
 -- string functions
--- concatenation
+-- concatenation   first value || second value  ( it's like  string1 + string2 in java)
+select email from EMPLOYEES;
+select FIRST_NAME||LAST_NAME||'@gmail.com' as fullEmail from EMPLOYEES;
+
+select EMPLOYEE_ID||FIRST_NAME as newId from EMPLOYEES;
+
+-- upper
+select upper(FIRST_NAME) from  EMPLOYEES;
+
+-- lower
+select lower(LAST_NAME) from EMPLOYEES;
+
+-- length   return us the size of that string
+select FIRST_NAME, length(FIRST_NAME) from EMPLOYEES;
+
+-- intcap  converting the first character of the data to upper case or capitalizing it
+select * from EMPLOYEES;
+select initcap(EMAIl) from EMPLOYEES;
+
+-- substring   index starts from 1
+select FIRST_NAME, substr(FIRST_NAME,1,3) from  EMPLOYEES
+order by FIRST_NAME asc ;
+select LAST_NAME, substr(LAST_NAME,2,2) from  EMPLOYEES;
+
+select substr(FIRST_NAME,1,1)|| substr(LAST_NAME,1,1) as newName from EMPLOYEES;
+
+--view  create a virtual table
+create view newEmail1 as select EMAIL as email from EMPLOYEES;
+
+
+
 
 
 
