@@ -38,7 +38,7 @@ public class Practice {
     // uk is in Europe
     @Test
     public void test1() throws SQLException {
-        String dbUrl = "jdbc:oracle:thin:@54.167.52.69:1521:XE";
+        String dbUrl = "jdbc:oracle:thin:@3.87.65.105:1521:XE";
         String username = "hr";
         String password = "hr";
 

@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="121c7d5c-6b66-417d-ae79-90d6a587f788" name="Changes" comment="init push">
-      <change afterPath="$PROJECT_DIR$/src/test/java/week3/Practice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/week3/RSMDPractice.java" afterDir="false" />
+    <list default="true" id="121c7d5c-6b66-417d-ae79-90d6a587f788" name="Changes" comment="review part is added">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/review/JDBCReview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/review/sqlReview.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/DBUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/week3/ConnectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/week3/ConnectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/week3/Practice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/week3/Practice.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,15 +48,38 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.lookFeel"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "oracle"
+    ]
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ConnectionTest">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="utilities" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.JDBCReview">
     <configuration name="ConnectionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="week3.ConnectionTest" />
       <module name="EU9_JDBC_REVIEW" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="week3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JDBCReview" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="review.JDBCReview" />
+      <module name="EU9_JDBC_REVIEW" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="review.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,8 +131,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ConnectionTest" />
+        <item itemvalue="Application.JDBCReview" />
         <item itemvalue="JUnit.Practice.test1" />
+        <item itemvalue="Application.ConnectionTest" />
         <item itemvalue="Application.Practice" />
         <item itemvalue="Application.RSMDPractice" />
       </list>
@@ -120,7 +147,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667762346173</updated>
-      <workItem from="1667762348050" duration="4543000" />
+      <workItem from="1667762348050" duration="4952000" />
+      <workItem from="1668815681676" duration="14000" />
+      <workItem from="1668847456288" duration="22000" />
+      <workItem from="1668970676350" duration="76000" />
+      <workItem from="1668971004419" duration="94000" />
+      <workItem from="1669214576576" duration="13000" />
+      <workItem from="1669804553320" duration="786000" />
+      <workItem from="1669807685845" duration="2166000" />
+      <workItem from="1670797361241" duration="4624000" />
     </task>
     <task id="LOCAL-00001" summary="init push">
       <created>1667764211609</created>
@@ -129,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667764211609</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updated">
+      <created>1667767224344</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667767224344</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +190,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init push" />
-    <option name="LAST_COMMIT_MESSAGE" value="init push" />
+    <MESSAGE value="updated" />
+    <MESSAGE value="review part is added" />
+    <option name="LAST_COMMIT_MESSAGE" value="review part is added" />
   </component>
 </project>
