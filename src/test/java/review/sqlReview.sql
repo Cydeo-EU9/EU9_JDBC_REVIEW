@@ -210,8 +210,20 @@ select substr(FIRST_NAME,1,1)|| substr(LAST_NAME,1,1) as newName from EMPLOYEES;
 --view  create a virtual table
 create view newEmail1 as select EMAIL as email from EMPLOYEES;
 
+create view realEmail1 as select FIRST_NAME||'.'||LAST_NAME||'@gmail.com' as realEmail from EMPLOYEES;
 
+create view realEmail as select FIRST_NAME||'.'||LAST_NAME||'@gmail.com' as realEmail from EMPLOYEES;
 
+--join
+-- (INNER) JOIN: Returns records that have matching values in both tables
+-- LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table
+-- RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
+-- FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
+
+-- return job_id and manager_in in the same table
+select JOB_ID, DEPARTMENTS.MANAGER_ID from EMPLOYEES
+inner join DEPARTMENTS
+on EMPLOYEES.DEPARTMENT_ID = DEPARTMENTS.DEPARTMENT_ID;
 
 
 
