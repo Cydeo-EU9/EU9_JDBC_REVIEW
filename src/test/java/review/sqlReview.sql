@@ -125,6 +125,67 @@ select round(sum(COMMISSION_PCT)) from EMPLOYEES;
 -- round function, if the number after decimal point is bigger or equal to 5, it will round to the whole number
 -- if the number after decimal point is smaller than 5, it will not round to the whole number
 
+-- group by    put same data into one group
+select JOB_ID from EMPLOYEES;
+select JOB_ID from  EMPLOYEES
+group by JOB_ID;
+
+select DEPARTMENT_ID from EMPLOYEES
+group by DEPARTMENT_ID;
+
+select DEPARTMENT_ID , count(DEPARTMENT_ID) from EMPLOYEES
+group by DEPARTMENT_ID;
+
+select MANAGER_ID, avg(SALARY) from EMPLOYEES
+group by MANAGER_ID;
+
+-- having    after data is put to some groups, then filter the data by putting some condition
+select MANAGER_ID, avg(SALARY) from EMPLOYEES
+group by MANAGER_ID
+having avg(SALARY) > 5000;
+
+select JOB_ID, sum(SALARY) from EMPLOYEES
+group by JOB_ID
+having sum(SALARY) < 7000;
+
+-- difference between having and where
+-- where is put condition before group, applies to individual rows
+-- having is put condition after group, applies to grouped rows
+
+
+-- row number  return us the result with that row number
+select FIRST_NAME from EMPLOYEES
+where ROWNUM <= 10;
+
+
+-- sub query
+-- like nested if or nested for loop, it's query inside another query.
+select round(avg(SALARY)) from EMPLOYEES;
+
+select FIRST_NAME, SALARY from EMPLOYEES
+where SALARY < (select round(avg(SALARY)) from EMPLOYEES);
+
+select FIRST_NAME, SALARY from EMPLOYEES
+order by SALARY desc ;
+
+select max(SALARY) from EMPLOYEES;
+
+select max(SALARY) from EMPLOYEES
+where SALARY != (select max(SALARY) from EMPLOYEES);
+
+select SALARY from (select distinct SALARY from EMPLOYEES
+order by SALARY desc)
+where ROWNUM < 15;
+
+select SALARY from EMPLOYEES
+order by SALARY desc ;
+
+-- string functions
+-- concatenation
+
+
+
+
 
 
 
