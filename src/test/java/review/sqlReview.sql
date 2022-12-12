@@ -328,3 +328,33 @@ truncate table Students;
 -- delete whole table
 drop table TEACHERS;
 
+-- set operators
+-- union   delete repeated values, order them by alpahbetic order
+select FIRST_NAME from EMPLOYEES
+union
+select LAST_NAME from EMPLOYEES;
+
+
+-- union all    doesn't delete repeated values, doesn't order
+select FIRST_NAME from EMPLOYEES
+union all
+select LAST_NAME from EMPLOYEES;
+
+-- minus   common value for tow qury will be deleted
+select SALARY from EMPLOYEES
+minus
+select COMMISSION_PCT from EMPLOYEES;
+
+--intersect
+select EMPLOYEE_ID from EMPLOYEES
+intersect
+select MANAGER_ID from EMPLOYEES;
+
+--UNION -> combines, removes duplicates, sorts
+--UNION ALL-> combines, does not remove duplicates, does not sort
+--MINUS -> show records from query1 that are not present in query2
+--INTERSECT -> show common records from
+
+
+
+
